@@ -13,7 +13,7 @@ If the user reaches maximum number of characters, he is informed that following 
 •	the LCS  is computed and the length of the substring is displayed. Also, LCS  is displayed. If the user chose case-insensitive, then the substring displayed is all with Uppercase letters.
 
 ## Method/Algorithm used
-	To compute LCS, dynamic programming is used. Let A be the first string, B be the second string and DYN be the matrix.
+To compute LCS, dynamic programming is used. Let A be the first string, B be the second string and DYN be the matrix.
 DYN[x,y] = the maximum length of a common subsequence using first x characters of A and first y characters of B. Then, if A[x] is equal to B[y], DYN[x,y] = 1 + DYN[x-1,y-1]. If A[x] is different from B[y], DYN[x,y] = max(DYN[x,y-1],DYN[x-1,y]). If x or y is 0, DYN[x,y] = 0.
 In the same time, we can build another matrix used to reconstruct the LCS, Father.
 Father[x,y] = the cell we used to obtain DYN[x,y]. (it may be [x-1,y-1],[x,y-1] or [x-1,y]).
